@@ -166,7 +166,6 @@
             _.forEach(constituencies, function (constituency) {
                 var constituencyNode = svgDoc.querySelector('.' + slugify(constituency.constituency_name));
                 d3.select(constituencyNode)
-                    .data([constituency])
                     .style("fill", function(d) { 
                         if (constituency.votes_percentage==0.0) {
                             return "#c0c0c0"
